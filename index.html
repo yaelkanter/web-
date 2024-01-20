@@ -28,7 +28,86 @@
 </head>
 
 <body class="dark:text-white light:text-black">
-
+    <title>Centered Calculator</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+        margin: 0;
+      }
+  
+      #calculator-container {
+        text-align: center;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: rgba(201, 76, 76, 0.3);
+      }
+  
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+  
+      button {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        margin: 5px;
+        background-color: pink; /* Set the background color to pink */
+        border: 1px solid #fff;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+  
+      button:hover {
+        background-color: lightpink; /* Change the background color on hover */
+      }
+    </style>
+  </head>
+  <body>
+  
+    <div id="calculator-container">
+      <h2>Calculator</h2>
+  
+      <input type="text" id="display" disabled>
+  
+      <div>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('+')">+</button>
+      </div>
+  
+      <div>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')">-</button>
+      </div>
+  
+      <div>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('*')">*</button>
+      </div>
+  
+      <div>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="appendToDisplay('/')">/</button>
+      </div>
+    </div>
+  
+    
+  
+  </body>
     <!-- your app code goes here -->
 
     <!-- special scripts for integration in MTW gallery - must be placed at the bottom of the HTML after your code -->
